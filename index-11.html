@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blub-in-JavaScript</title>
+    <style>
+    body{
+        background-color: black;
+    }
+    </style>
+    <script>
+        function clickMe(state){
+            if (state == 'on'){
+                document.body.style.backgroundColor="yellow";
+                document.getElementById("myid").setAttribute('src',"blub2.png")
+            }else{
+                document.body.style.backgroundColor="black";
+                document.getElementById("myid").setAttribute('src',"blub1.png")
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="myid" width="300" src="./blub1.png" alt="">
+   <button onclick="clickMe('on')">ON</button>
+   <button onclick="clickMe('off')">OFF</button>
+</body>
+</html>
